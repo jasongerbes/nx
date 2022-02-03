@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "NxCypressConvertToTen",
+  "cli": "nx",
+  "title": "Convert e2e project to Cypress 10",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "string",
+      "description": "The name of the project to convert",
+      "$default": {
+        "$source": "projectName"
+      }
+    },
+    "all": {
+      "type": "boolean",
+      "description": "Convert all projects in the workspace",
+      "default": false
+    },
+    "targets": {
+      "type": "array",
+      "description": "The targets to convert",
+      "default": ["e2e"]
+    }
+  }
+}
